@@ -1,0 +1,10 @@
+<h1>Shopping List</h1>
+<label>Add new Item</label>
+<br />
+<input type="text" (keyup.enter)="addShoppingItem()" placeholder="name" [(ngModel)]="itemName" />
+<input type="number" (keyup.enter)="addShoppingItem()" placeholder="amount" [(ngModel)]="itemAmount" />
+<ul>
+  <li *ngFor="let product of shoppingList; let i = index" [ngClass]="{highlighted: i%2 === 0}">
+    {{ i + 1 }} - {{ product.name }} ({{ product.quantity }})
+  </li>
+</ul>

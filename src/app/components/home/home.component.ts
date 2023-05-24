@@ -10,15 +10,23 @@ export class HomeComponent {
   lastName: string;
   message: string;
   isDisabled: boolean;
+  secretMessageFontSize: number;
+  secretMessageColor: string;
 
   constructor() {
     this.name = "John";
     this.lastName = "Doe";
     this.message = "Enter your name";
     this.isDisabled = false;
+    this.secretMessageFontSize = 40;
+    this.secretMessageColor = "blue";
   }
 
   sayHello(): void {
     console.log(`Hello ${this.name} ${this.lastName}`);    
+  }
+
+  isPepe(): boolean {
+    return this.name === "Pepe";
   }
 }
